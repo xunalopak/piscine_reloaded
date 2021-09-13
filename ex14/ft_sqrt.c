@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:09 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:09 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 13:45:32 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 13:45:32 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <limits.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_print_alphabet(void)
+int	ft_sqrt(int nb)
 {
 	int	i;
 
-	i = 'a';
-	ft_putchar(i);
-	while (i != 'z')
+	i = 0;
+	while (i <= INT_MAX && i <= nb)
 	{
+		if (i * i == nb)
+			return (i);
 		i++;
-		ft_putchar(i);
 	}
+	return (0);
 }

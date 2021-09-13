@@ -1,31 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:09 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:09 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 13:09:12 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 13:09:12 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	write(1, &c, 1);
-}
-
-void	ft_print_alphabet(void)
-{
-	int	i;
-
-	i = 'a';
-	ft_putchar(i);
-	while (i != 'z')
-	{
-		i++;
-		ft_putchar(i);
-	}
+	*div = a / b;
+	*mod = a % b;
 }

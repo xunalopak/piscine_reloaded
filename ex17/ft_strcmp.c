@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:09 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:09 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 15:19:00 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 15:19:00 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strcmp(unsigned char *s1, unsigned char *s2)
 {
-	write(1, &c, 1);
-}
+	unsigned int	i;
 
-void	ft_print_alphabet(void)
-{
-	int	i;
-
-	i = 'a';
-	ft_putchar(i);
-	while (i != 'z')
-	{
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
-		ft_putchar(i);
-	}
+	if (s2[i] == '\0')
+		return (0);
+	else
+		return (s1[i] - s2[i]);
 }

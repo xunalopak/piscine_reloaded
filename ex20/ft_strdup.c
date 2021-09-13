@@ -1,31 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:09 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:09 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 17:06:36 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 17:06:36 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_print_alphabet(void)
+int	ft_strlen(char *str)
 {
 	int	i;
 
-	i = 'a';
-	ft_putchar(i);
-	while (i != 'z')
-	{
+	i = 0;
+	while (str[i])
 		i++;
-		ft_putchar(i);
+	return (i);
+}
+
+char	*ft_strdup(char *src)
+{
+	int		i;
+	char	*dest;
+
+	i = 0;
+	dest = malloc(sizeof(char) * ft_strlen(src));
+	if (!dest)
+		return (NULL);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+int main(void)
+{
+	printf("%s", ft_strdup("MDRRR non mais"));
 }

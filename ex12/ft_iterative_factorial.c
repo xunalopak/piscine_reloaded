@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:09 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:09 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 13:18:46 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 13:18:46 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_print_alphabet(void)
+int	ft_iterative_factorial(int nb)
 {
 	int	i;
+	int	fact;
 
-	i = 'a';
-	ft_putchar(i);
-	while (i != 'z')
+	i = 1;
+	fact = 1;
+	if (nb < 0)
+		return (0);
+	while (i <= nb)
 	{
+		fact = fact * i;
 		i++;
-		ft_putchar(i);
 	}
+	return (fact);
 }

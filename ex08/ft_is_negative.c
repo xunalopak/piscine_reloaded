@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:02 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:03 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 13:03:54 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 13:03:55 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,10 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_numbers(void)
+void	ft_is_negative(int n)
 {
-	int	i;
-
-	i = '0';
-	while (i != '9')
-	{
-		ft_putchar(i);
-		i++;
-	}
-	ft_putchar(i);
+	if (n >= 0)
+		ft_putchar('P');
+	else
+		ft_putchar('N');
 }

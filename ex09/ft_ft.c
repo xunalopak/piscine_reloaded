@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:04:02 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:04:03 by rchampli         ###   ########.fr       */
+/*   Created: 2021/09/10 13:03:45 by rchampli          #+#    #+#             */
+/*   Updated: 2021/09/10 13:03:47 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_ft(int *nbr)
 {
-	write(1, &c, 1);
-}
-
-void	ft_print_numbers(void)
-{
-	int	i;
-
-	i = '0';
-	while (i != '9')
-	{
-		ft_putchar(i);
-		i++;
-	}
-	ft_putchar(i);
+	*nbr = 42;
 }
