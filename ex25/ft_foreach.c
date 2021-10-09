@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 11:53:34 by rchampli          #+#    #+#             */
-/*   Updated: 2021/10/09 11:53:34 by rchampli         ###   ########.fr       */
+/*   Created: 2021/10/09 11:51:43 by rchampli          #+#    #+#             */
+/*   Updated: 2021/10/09 11:51:43 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	int	i;
+
+	i = 0;
+	while (i <= length)
+	{
+		f(tab[i]);
+		i++;
+	}
 }

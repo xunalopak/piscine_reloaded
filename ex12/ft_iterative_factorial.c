@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 13:18:46 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 13:18:46 by rchampli         ###   ########.fr       */
+/*   Created: 2021/10/09 11:53:41 by rchampli          #+#    #+#             */
+/*   Updated: 2021/10/09 11:53:41 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

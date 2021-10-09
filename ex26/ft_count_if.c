@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 11:53:34 by rchampli          #+#    #+#             */
-/*   Updated: 2021/10/09 11:53:34 by rchampli         ###   ########.fr       */
+/*   Created: 2021/10/09 11:51:32 by rchampli          #+#    #+#             */
+/*   Updated: 2021/10/09 11:51:32 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (tab[i])
+	{
+		if (f(tab[i]) == 1)
+			count++;
+		i++;
+	}
+	return (count);
 }

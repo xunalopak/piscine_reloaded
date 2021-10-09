@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchampli <rchampli@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 17:06:36 by rchampli          #+#    #+#             */
-/*   Updated: 2021/09/10 17:06:36 by rchampli         ###   ########.fr       */
+/*   Created: 2021/10/09 11:52:28 by rchampli          #+#    #+#             */
+/*   Updated: 2021/10/09 11:52:28 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,4 @@ char	*ft_strdup(char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int main(void)
-{
-	printf("%s", ft_strdup("MDRRR non mais"));
 }

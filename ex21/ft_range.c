@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 11:53:34 by rchampli          #+#    #+#             */
-/*   Updated: 2021/10/09 11:53:34 by rchampli         ###   ########.fr       */
+/*   Created: 2021/10/09 11:52:19 by rchampli          #+#    #+#             */
+/*   Updated: 2021/10/09 11:52:19 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+#include <stdlib.h>
+
+int	*ft_range(int min, int max)
 {
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	int	*dest;
+	int	len;
+	int	i;
+
+	i = 0;
+	len = max - min;
+	if (len <= 0)
+		return (NULL);
+	dest = malloc(sizeof(int) * len);
+	if (!dest)
+		return (NULL);
+	while (i < len)
+	{
+		dest[i] = min;
+		min++;
+		i++;
+	}
+	return (dest);
 }
